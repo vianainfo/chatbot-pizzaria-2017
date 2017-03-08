@@ -46,7 +46,7 @@ app.post('/webhook/', function (req, res) {
 		}
 
 		var payload = {
-			workspace_id: "paste workspace ID here"
+			workspace_id: "d31c474b-c1a5-4c85-b2d2-9bb5a4fc5eab "
 		};
 
 		if (params) {
