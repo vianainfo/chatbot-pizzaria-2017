@@ -10,15 +10,15 @@ app.use(bodyParser.json())
 var conversation_id = "";
 var w_conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',
-    username: process.env.CONVERSATION_USERNAME || 'paste conversation api username here',
-    password: process.env.CONVERSATION_PASSWORD || 'paste conversation api password here',
+    username: process.env.CONVERSATION_USERNAME || '6EmpxCdjlO4z',
+    password: process.env.CONVERSATION_PASSWORD || '607bd23e-48de-4de4-8371-fed8786b7c2b',
     version: 'v1',
     version_date: '2016-07-11'
 });
-var workspace = process.env.WORKSPACE_ID || 'workspaceId';
+var workspace = process.env.WORKSPACE_ID || 'd31c474b-c1a5-4c85-b2d2-9bb5a4fc5eab';
 
 app.get('/webhook/', function (req, res) {
-    if (req.query['hub.verify_token'] === 'paste FB token here') {
+    if (req.query['hub.verify_token'] === 'EAAFjaTqGDZCkBAKjhdfKmxrg2l8Wj0iVc0HLFlvZB1L8DTGHMUPQr2Hmxkn5HYHEp5XnNnZARAK2ZC3Crn5LLG7oZB0mwnlLYqmSYYW20ZAsW0mm14kddqKWcaUrWtysULFizNh9Ykf2poY3wElmJ6TyPZCL8KBYJnBChrKvNquAg61pa5MZBcLR') {
         res.send(req.query['hub.challenge']);
     }
     res.send('Erro de validação no token.');
@@ -102,7 +102,7 @@ function sendMessage(sender, text_) {
     });
 };
 
-var token = "paste FB token here";
+var token = "EAAFjaTqGDZCkBAKjhdfKmxrg2l8Wj0iVc0HLFlvZB1L8DTGHMUPQr2Hmxkn5HYHEp5XnNnZARAK2ZC3Crn5LLG7oZB0mwnlLYqmSYYW20ZAsW0mm14kddqKWcaUrWtysULFizNh9Ykf2poY3wElmJ6TyPZCL8KBYJnBChrKvNquAg61pa5MZBcLR";
 var host = (process.env.VCAP_APP_HOST || 'localhost');
 var port = (process.env.VCAP_APP_PORT || 3000);
 app.listen(port, host);
