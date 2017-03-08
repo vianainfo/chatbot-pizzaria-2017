@@ -10,8 +10,8 @@ app.use(bodyParser.json())
 var conversation_id = "";
 var w_conversation = watson.conversation({
     url: 'https://gateway.watsonplatform.net/conversation/api',
-    username: process.env.CONVERSATION_USERNAME || '607bd23e-48de-4de4-8371-fed8786b7c2b',
-    password: process.env.CONVERSATION_PASSWORD || '6EmpxCdjlO4z',
+    username: process.env.CONVERSATION_USERNAME || '292a0288-7cab-4d30-9e01-f439471b5eec',
+    password: process.env.CONVERSATION_PASSWORD || 'ak2onqyjYrIe',
     version: 'v1',
     version_date: '2016-07-11'
 });
